@@ -33,13 +33,15 @@
 			bottom:-300%;
 			left:0;
 			z-index:-1;
-			background: #fff;
+			background: transparent;
 			border-left: 40px solid blue;
 			content:'';
 		}
 		.shout_text H3 {color: blue;}
 		.shout_text H4 {margin-top: 20px;}
 		.shout_text H5 {font-size: .3em; margin-top: 5px;}
+		.slide.blue {background: blue;}
+		.slide.blue .shout_text {color: #fff !important;}
 	</style>
 
 	<header class="caption">
@@ -47,21 +49,17 @@
 		<p><a href="http://zloy.me/">Денис Хананеин</a></p>
 	</header>
 
-	<section class="slide">
-		<div class="shout_text">
-			<h3>Shower 2.0</h3>
+	<section class="slide" style="background: blue">
+		<div class="shout_text" style="color: white !important">
+			<h3 style="color: white !important">Shower 2.0</h3>
 			<h4 style="font-size:.3em;">&gt; WSD, 13 декабря 2015, Москва</h4>
 			<h5>&gt; Денис Хананеин</h5>
 		</div>
 	</section>
 
-	<section class="slide">
-		<h2 class="shout_text center">
-			<span class="next">Где Макеев?</span>
-		</h2>
-	</section>
+	<section class="slide"><img src="pictures/fry.jpg" alt="" class="cover width"></section>
 
-	<section class="slide">
+	<section class="slide blue">
 		<h2 class="shout_text">История</h2>
 	</section>
 
@@ -79,6 +77,10 @@
 	</section>
 
 	<section class="slide">
+		<img class="cover" src="pictures/zol.jpg" alt="">
+	</section>
+
+	<section class="slide">
 		<h2>История</h2>
 		<p>
 			Вторая версия началась <strong>4 мая 2014.</strong><br/>
@@ -87,53 +89,52 @@
 		<img src="pictures/history-commits-2.png"/>
 	</section>
 
-	<section class="slide">
+	<section class="slide blue">
 		<h2 class="shout_text">
 			Что сделано?<br>
-			<span class="next" style="color: blue">Темы</span>
+			<span class="next" style="opacity:.7">Темы</span>
 		</h2>
 	</section>
 
 	<section class="slide">
-		<div class="queue">
-			<img class="cover first" src="pictures/theme-ribbon.png" alt=""/>
-			<img src="pictures/theme-ribbon-new.png" alt="" class="cover next first" style="width:90%">
-			<img class="cover seconds next" style="position: absolute;" src="pictures/bright.png" alt=""/>
-			<svg class="cover next" style="position: absolute; left: 65%; transform: scale(3)">
-				<line x1="0" y1="0" x2="100" y2="100" style="stroke:rgb(255,0,0);stroke-width:5" />
-				<line x1="0" y1="100" x2="100" y2="0" style="stroke:rgb(255,0,0);stroke-width:5" />
-			</svg>
-			<img class="cover third next" style="position: absolute;" src="pictures/material.png" alt=""/>
-		</div>
+		<img src="pictures/themes/ribbon-list-before.png" alt="" class="cover">
+		<h3 class="place top" style="color: #fff;opacity:.5">before</h3>
 	</section>
 
 	<section class="slide">
-		<h2>Ribbon</h2>
-		<p style="width:45%">
-			Внешне всё достаточно сильно поменялось: ушла текстура, слайды иначе масштабируются, по-новому комбинируются элементы.
-		</p>
-		<img class="place right" width="50%" src="pictures/theme-ribbon-new.png" alt="">
+		<img src="pictures/themes/ribbon-list-after.png" alt="" class="cover">
+		<h3 class="place top" style="color: #fff;opacity:.5">after</h3>
 	</section>
 
 	<section class="slide">
-		<h2>Ribbon</h2>
-		<pre>
-			<code>&lt;section class="slide"&gt;<mark class="important">&lt;div&gt;</mark></code>
-			<code>	<mark class="comment">&lt;!-- content --&gt;</mark></code>
-			<code><mark class="important">&lt;/div&gt;</mark>&lt;/section&gt;</code>
-		</pre>
-		<pre class="next">
-			<code>&lt;section class="slide"&gt;</code>
-			<code>	<mark class="comment">&lt;!-- content --&gt;</mark></code>
-			<code>&lt;/section&gt;</code>
-		</pre>
+		<img src="pictures/themes/ribbon-table-before.png" alt="" class="cover">
+		<h3 class="place top" style="opacity:.5">before</h3>
 	</section>
 
 	<section class="slide">
-		<h2>Material</h2>
-		<p style="width:40%">Модная и молодежная. Выросла из <em>Bright</em> Соответствует гайдам Google.</p>
-		<p><a href="https://github.com/shower/material">shower/material</a></p>
-		<img class="place center right" src="pictures/theme-material.png" width="50%" alt="">
+		<img src="pictures/themes/ribbon-table-after-1.png" alt="" class="cover">
+		<h3 class="place top" style="opacity:.5">after</h3>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/themes/ribbon-table-after-2.png" alt="" class="cover">
+		<h3 class="place top" style="opacity:.5">after</h3>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/themes/ribbon-grid.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/themes/ribbon-columns.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/themes/material-1.png" alt="" class="cover">
+	</section>
+
+	<section class="slide">
+		<img src="pictures/themes/material-2.png" alt="" class="cover">
 	</section>
 
 	<section class="slide">
@@ -150,9 +151,16 @@
 	</section>
 
 	<section class="slide">
+		<img src="pictures/themes/material-amber.png" alt="" class="cover">
+		<img src="pictures/themes/material-grey.png" alt="" class="cover next">
+		<img src="pictures/themes/material-purple.png" alt="" class="cover next">
+		<img src="pictures/themes/material-red.png" alt="" class="cover next">
+	</section>
+
+	<section class="slide blue">
 		<h2 class="shout_text">
 			Что сделано?<br>
-			<span class="next" style="color: blue">Полностью переписан движок</span>
+			<span class="next" style="opacity: .7">Полностью переписан движок</span>
 		</h2>
 	</section>
 
@@ -173,7 +181,6 @@
 			<li class="next">появились юнит-тесты;</li>
 			<li class="next">модульная структура;</li>
 			<li class="next">нормальное API и события;</li>
-			<li class="next">документация;</li>
 			<li class="next">плагины;</li>
 		</ul>
 	</section>
@@ -211,8 +218,13 @@
 	</section>
 
 	<section class="slide">
+		<img class="cover height" src="pictures/jake.png" alt="">
+	</section>
+
+	<section class="slide blue">
 		<h2 class="shout_text">Плагины</h2>
 	</section>
+
 
 	<section class="slide">
 		<h2>Плагины: модуль</h2>
@@ -263,9 +275,11 @@
 		</ul>
 	</section>
 
-	<section class="slide">
+	<section class="slide blue">
 		<h2 class="shout_text">Примеры</h2>
 	</section>
+
+	<section class="slide"><img src="pictures/hypno.jpg" alt="" class="cover"></section>
 
 	<section class="slide">
 		<h2>shower-map</h2>
@@ -280,10 +294,16 @@
 	</section>
 
 	<section class="slide">
-		<h2>shower-map</h2>
-		<ymap center="33, 55" zoom="14">
-			<placemark>
-		</ymap>
+		<h2>shower-map: как</h2>
+		<ol lang="ru">
+			<li>при инициализации грузим API карт</li>
+			<li>после загрузки пробегаем по слайдам</li>
+		</ol>
+		<pre>
+			<code>shower.getSlidesArray()</code>
+			<code>slide.layout.getElement()</code>
+			<code><mark class="comment">element.querySelectorAll('ymaps')</mark></code>
+		</pre>
 	</section>
 
 	<section class="slide">
@@ -317,14 +337,13 @@
 			<code>&lt;section class="slide"</code>
 			<code>	<mark class="important">data-speech-bookmark="африка"</mark></code>
 			<code>&gt;</code>
-			<code>	<mark class="comment">&lt;h2&gt;Принцип пупырки&lt;/h2&gt;</mark></code>
-			<code>	<mark class="comment">&lt;p&gt;Пупыыыыырки&lt;/p&gt;</mark></code>
+			<code>	<mark class="comment">&lt;img src="pictures/africa.jpg"&gt;</mark></code>
 			<code>&lt;/section&gt;</code>
 		</pre>
 	</section>
 
 	<section class="slide" data-speech-bookmark="африка">
-		<h2 class="shout_text">жаркая</h2>
+		<img src="pictures/africa.jpg" alt="" class="cover width">
 	</section>
 
 	<section class="slide">
@@ -344,6 +363,18 @@
 			<code>&lt;body class="shower" <mark class="important">data-server="http://localhost"</mark>&gt;</code>
 		</pre>
 		<pre class="next"><code><mark class="comment">http://site.ru/index.html</mark> <mark class="important">?key=123</mark></code></pre>
+	</section>
+
+	<section class="slide">
+		<h2>Shower 2.0</h2>
+		<p>Денис Хананеин</p>
+		<ul lang="ru">
+			<li><a href="http://zloy.me/">zloy.me</a></li>
+			<li><a href="https://twitter.com/kandasoft">twitter.com/kandasoft</a></li>
+			<li><a href="mailto:i@zloy.me">i@zloy.me</a></li>
+		</ul>
+		<p>Презентация: <a href="http://zloy.me/talks/shower">zloy.me/talks/shower</a></p>
+		<img src="pictures/logo.svg" width="300px" alt="" class="place right" style="margin-right: 100px;">
 	</section>
 
 	<div class="progress"></div>
