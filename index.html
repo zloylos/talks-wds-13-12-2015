@@ -42,6 +42,7 @@
 		.shout_text H5 {font-size: .3em; margin-top: 5px;}
 		.slide.blue {background: blue;}
 		.slide.blue .shout_text {color: #fff !important;}
+
 	</style>
 
 	<header class="caption">
@@ -77,7 +78,17 @@
 	</section>
 
 	<section class="slide">
+		<h2 style="color: white">4:55</h2>
+		<img src="pictures/fry-coffee.png" alt="" class="cover width">
+	</section>
+
+	<section class="slide">
+		<h2 class="place bottom" style="display: inline-block; width: 100%; text-align: center;font: bold 4em/1 PT Mono, sans-serif; background: rgba(255, 255, 255, .7)">1.x -> 2.0</h2>
 		<img class="cover" src="pictures/zol.jpg" alt="">
+	</section>
+
+	<section class="slide">
+
 	</section>
 
 	<section class="slide">
@@ -176,7 +187,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>А ещё…</h2>
+		<h2>В деталях:</h2>
 		<ul lang="ru">
 			<li class="next">появились юнит-тесты;</li>
 			<li class="next">модульная структура;</li>
@@ -227,7 +238,7 @@
 
 
 	<section class="slide">
-		<h2>Плагины: модуль</h2>
+		<h2>Модуль плагина</h2>
 		<pre>
 			<code class="next"><mark class="important">shower.modules.define</mark>('shower-plugin', [</code>
 			<code class="next">	<mark class="comment">'depend'</mark></code>
@@ -238,7 +249,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Плагины: класс</h2>
+		<h2>Плагин</h2>
 		<pre>
 			<code>class MyPlugin {</code>
 			<code>	constructor(<mark class="important">shower, options</mark>) {</code>
@@ -250,7 +261,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Плагины: события</h2>
+		<h2>Cобытия</h2>
 		<pre>
 			<code>setupListeners() {</code>
 			<code>	<mark>this._shower.player.events</mark></code>
@@ -261,6 +272,17 @@
 			<code><mark class="comment">on(events, callback[, context])</mark></code>
 			<code><mark class="comment">off(events, callback[, context])</mark></code>
 			<code><mark class="comment">offAll()</mark></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Автоинициализация</h2>
+		<pre>
+			<code><mark class="comment">shower.modules.require([</mark></code>
+			<code>	<mark>'shower'</mark></code>
+			<code><mark class="comment">], showerGlobal => {</mark></code>
+			<code>	<mark class="important">showerGlobal.plugins.add('shower-plugin');</mark></code>
+			<code><mark class="comment">})</mark></code>
 		</pre>
 	</section>
 
@@ -300,9 +322,9 @@
 			<li>после загрузки пробегаем по слайдам</li>
 		</ol>
 		<pre>
-			<code>shower.getSlidesArray()</code>
+			<code>shower.getSlides()</code>
 			<code>slide.layout.getElement()</code>
-			<code><mark class="comment">element.querySelectorAll('ymaps')</mark></code>
+			<code><mark class="comment">element.querySelectorAll('ymap')</mark></code>
 		</pre>
 	</section>
 
@@ -328,7 +350,8 @@
 			<code>	- two</code>
 			<code>	- three</code>
 		</pre>
-		<pre><code><mark class="comment">npm shower-markdown</mark></code></pre>
+		<code>Используется: shower.container.getElement()</code>
+		<pre><code><mark class="comment">npm i shower-markdown</mark></code></pre>
 	</section>
 
 	<section class="slide">
@@ -355,14 +378,37 @@
 		<h2>shower-mirror</h2>
 		<pre>
 			<code><mark class="comment">// Запускаем сервер.</mark></code>
-			<code>git clone <mark>https://github.com/zloylos/shower-mirror</mark></code>
-			<code>npm i && npm start</code>
+			<code>npm i shower-mirror-server && \</code>
+			<code>	<mark>KEY=1234</mark> run shower-mirror</code>
 		</pre>
 		<pre class="next">
+			<code></code>
 			<code><mark class="comment">// Указываем адрес сервера</mark></code>
-			<code>&lt;body class="shower" <mark class="important">data-server="http://localhost"</mark>&gt;</code>
+			<code>&lt;script src=<mark class="important">"server/socket.io/socket.io.js"</mark>&gt;</code>
 		</pre>
-		<pre class="next"><code><mark class="comment">http://site.ru/index.html</mark> <mark class="important">?key=123</mark></code></pre>
+		<pre class="next"><code><mark class="comment">http://site/index.html</mark> <mark class="important">?key=1234</mark></code></pre>
+	</section>
+
+	<section class="slide">
+		<h2>shower-mirror</h2>
+		<pre>
+			<code>shower.player.events <mark class="comment">// activate</mark></code>
+			<code>globalShower.plugins.get(plugin, shower);</code>
+			<code>plugin.events <mark class="comment">// next</mark></code>
+		</pre>
+		<code>+ Socket.IO</code>
+	</section>
+
+	<section class="slide blue">
+		<h2 class="shout_text">npm publish</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout_text">
+			GH/shower/
+			&nbsp;&nbsp;<a href="https://github.com/shower/core">core</a> <br>
+			&nbsp;&nbsp;<a href="https://github.com/shower/shower">shower</a>
+		</h2>
 	</section>
 
 	<section class="slide">
