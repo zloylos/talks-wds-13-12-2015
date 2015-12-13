@@ -303,12 +303,18 @@
 		<h2>shower-map</h2>
 		<pre>
 			<code><mark class="comment">&lt;section class="slide"&gt;</mark></code>
-			<code>	<mark class="important">&lt;ymap center="33, 55" zoom=15&gt;</mark></code>
-			<code>		<mark class="important">&lt;placemark/&gt;</mark></code>
+			<code>	<mark class="important">&lt;ymap data=center="55,37" data=zoom=17&gt;</mark></code>
+			<code>		<mark class="important">&lt;placemark data-coords="55,37"/&gt;</mark></code>
 			<code>	&lt;/ymap&gt;</code>
 			<code><mark class="comment">&lt;/section&gt;</mark></code>
 		</pre>
 		<pre><code><mark class="comment">npm i shower-map</mark></code></pre>
+	</section>
+
+	<section class="slide">
+		<ymap class="cover height" data-center="55.682866,37.618623" data-zoom="17">
+			<placemark data-coords="55.682866,37.618623" data-balloon="WSD, 13.12.2015"/>
+		</ymap>
 	</section>
 
 	<section class="slide">
@@ -334,20 +340,20 @@
 			<code>	- three</code>
 			<code><mark class="comment">&lt;/section&gt;</mark></code>
 		</pre>
-		<pre><code><mark class="comment">npm i shower-markdown</mark></code></pre>
+		<pre class="next"><code><mark class="important">npm i shower-markdown</mark></code></pre>
 	</section>
 
 	<section class="slide">
 		<h2>shower-markdown</h2>
 		<pre>
 			<code><mark class="important">::: slide</mark></code>
-			<code>	## markdown plugin</code>
-			<code>	- one</code>
-			<code>	- two</code>
-			<code>	- three</code>
+			<code>## markdown plugin</code>
+			<code>- one</code>
+			<code>- two</code>
+			<code>- three</code>
+			<code><mark>:::</mark></code>
 		</pre>
-		<code>Используется: shower.container.getElement()</code>
-		<pre><code><mark class="comment">npm i shower-markdown</mark></code></pre>
+		<pre class="next"><code><mark class="important">npm i shower-markdown</mark></code></pre>
 	</section>
 
 	<section class="slide">
@@ -425,6 +431,10 @@
 	</footer>
 
 	<script src="shower.min.js"></script>
+	<script src="http://localhost:1111/socket.io/socket.io.js"></script>
 	<script src="shower-mirror.js"></script>
+	<script src="shower-markdown.js"></script>
+	scri[src=""]
+	<script src="shower-map.js"></script>
 </body>
 </html>
