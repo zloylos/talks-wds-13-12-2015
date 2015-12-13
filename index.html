@@ -185,10 +185,10 @@
 	<section class="slide">
 		<h2>В деталях:</h2>
 		<ul lang="ru">
-			<li class="next">появились юнит-тесты;</li>
 			<li class="next">модульная структура;</li>
+			<li class="next">появились юнит-тесты;</li>
 			<li class="next">нормальное API и события;</li>
-			<li class="next">плагины;</li>
+			<li class="next">плагины.</li>
 		</ul>
 	</section>
 
@@ -217,7 +217,7 @@
 			<code>modules.define(<mark>'loader'</mark>, provide => {</code>
 			<code>	<mark>$.script(</mark></code>
 			<code>		'http://my-plugin-url',</code>
-			<code>		<mark class="important">() => provide(PluginGlobalVar)</mark></code>
+			<code>		<mark class="important">(Plugin) => provide(Plugin)</mark></code>
 			<code>	);</code>
 			<code>});</code>
 		</pre>
@@ -293,11 +293,11 @@
 		</ul>
 	</section>
 
+	<section class="slide"><img src="pictures/hypno.jpg" alt="" class="cover"></section>
+
 	<section class="slide blue">
 		<h2 class="shout_text">Примеры</h2>
 	</section>
-
-	<section class="slide"><img src="pictures/hypno.jpg" alt="" class="cover"></section>
 
 	<section class="slide">
 		<h2>shower-map</h2>
